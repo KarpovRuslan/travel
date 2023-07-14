@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import air1 from "./assets/img/air_img.jpeg";
 import air2 from "./assets/img/img2.jpeg";
 import air3 from "./assets/img/img3.webp";
@@ -6,18 +8,55 @@ import dest2 from "./assets/img/dest2.webp";
 import dest3 from "./assets/img/dest3.jpeg";
 import dest4 from "./assets/img/dest4.jpeg";
 
+import trip1 from "./assets/img/trip2.png";
+import trip2 from "./assets/img/trip3.png";
+import trip3 from "./assets/img/trip4.png";
+
 import "./assets/css/styles.css";
+import React, { useEffect, useState } from "react";
 
 function App() {
+  const [headerClass, setHeaderClass] = useState();
+  const [menuIcon, setMenuIcon] = useState("bx bx-menu");
+  const [navBar, setNavBar] = useState("navbar");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setHeaderClass("stick");
+        setMenuIcon("bx bx-menu");
+        setNavBar("navbar");
+        console.log("stick");
+      } else {
+        setHeaderClass("");
+        console.log("non-stick");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const menuClick = () => {
+    if (menuIcon === "bx bx-menu" && navBar === "navbar") {
+      setMenuIcon("bx bx-x");
+      setNavBar("navbar open");
+    } else {
+      setMenuIcon("bx bx-menu");
+      setNavBar("navbar");
+    }
+  };
+
   return (
     <div>
       {/*Header section */}
-      <header>
-        <a href=" " className="logo">
+      <header className={headerClass}>
+        <a href="" className="logo">
           Company
         </a>
-        <div id="menu-icon" className="bx bx-menu"></div>
-        <ul className="navbar">
+        <div id="menu-icon" className={menuIcon} onClick={menuClick}></div>
+        <ul className={navBar}>
           <li>
             <a href="#home">Home</a>
           </li>
@@ -59,27 +98,27 @@ function App() {
         <div className="row-items">
           {/* box */}
           <div className="container-box">
-            <div className="container-image">
-              <img src={air1} alt="" />
+            <div className="container-img">
+              <img src={trip1} alt="" />
             </div>
             <h4>Air Trip</h4>
             <p>150 places</p>
           </div>
           {/* box */}
           <div className="container-box">
-            <div className="container-image">
-              <img src={air2} alt="" />
+            <div className="container-img">
+              <img src={trip2} alt="" />
             </div>
-            <h4>Air Trip</h4>
-            <p>150 places</p>
+            <h4>Summer Trip</h4>
+            <p>170 places</p>
           </div>
           {/* box */}
           <div className="container-box">
-            <div className="container-image">
-              <img src={air3} alt="" />
+            <div className="container-img">
+              <img src={trip3} alt="" />
             </div>
-            <h4>Air Trip</h4>
-            <p>150 places</p>
+            <h4>Winter Trip</h4>
+            <p>120 places</p>
           </div>
         </div>
       </section>
@@ -95,7 +134,7 @@ function App() {
             {/* box */}
             <div className="box">
               <div className="thum">
-                <img src="" alt=""></img>
+                <img src={air1} alt=""></img>
               </div>
               <div className="dest-content">
                 <div className="location">
@@ -103,22 +142,19 @@ function App() {
                   <p>4h - 5h</p>
                 </div>
                 <div className="stars">
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
                 </div>
@@ -127,7 +163,7 @@ function App() {
             {/* box */}
             <div className="box">
               <div className="thum">
-                <img src="" alt=""></img>
+                <img src={air2} alt=""></img>
               </div>
               <div className="dest-content">
                 <div className="location">
@@ -135,22 +171,19 @@ function App() {
                   <p>4h - 5h</p>
                 </div>
                 <div className="stars">
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
                 </div>
@@ -159,7 +192,7 @@ function App() {
             {/* box */}
             <div className="box">
               <div className="thum">
-                <img src="" alt=""></img>
+                <img src={air2} alt=""></img>
               </div>
               <div className="dest-content">
                 <div className="location">
@@ -167,22 +200,19 @@ function App() {
                   <p>4h - 5h</p>
                 </div>
                 <div className="stars">
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
                 </div>
@@ -191,7 +221,7 @@ function App() {
             {/* box */}
             <div className="box">
               <div className="thum">
-                <img src="" alt=""></img>
+                <img src={air3} alt=""></img>
               </div>
               <div className="dest-content">
                 <div className="location">
@@ -199,22 +229,19 @@ function App() {
                   <p>4h - 5h</p>
                 </div>
                 <div className="stars">
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
                 </div>
@@ -223,7 +250,7 @@ function App() {
             {/* box */}
             <div className="box">
               <div className="thum">
-                <img src="" alt=""></img>
+                <img src={air1} alt=""></img>
               </div>
               <div className="dest-content">
                 <div className="location">
@@ -231,22 +258,19 @@ function App() {
                   <p>4h - 5h</p>
                 </div>
                 <div className="stars">
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
-                  <a href="">
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a href="">
+                  <a>
                     <i className="bx bxs-star"></i>
                   </a>
                 </div>
@@ -307,7 +331,7 @@ function App() {
         </div>
       </section>
       {/* footer */}
-      <section className="contact">
+      <section className="contact" id="contact">
         <div className="footer">
           <div className="main">
             {/* list */}
