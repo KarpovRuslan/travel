@@ -1,12 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-
-import air1 from "./assets/img/air_img.jpeg";
-import air2 from "./assets/img/img2.jpeg";
-import air3 from "./assets/img/img3.webp";
-import dest1 from "./assets/img/dest1.jpeg";
-import dest2 from "./assets/img/dest2.webp";
-import dest3 from "./assets/img/dest3.jpeg";
-import dest4 from "./assets/img/dest4.jpeg";
+import { BiSolidPlaneTakeOff } from "react-icons/bi";
 
 import trip1 from "./assets/img/trip2.png";
 import trip2 from "./assets/img/trip3.png";
@@ -14,6 +7,10 @@ import trip3 from "./assets/img/trip4.png";
 
 import "./assets/css/styles.css";
 import React, { useEffect, useState } from "react";
+import Destination from "./components/Destination";
+import Newsletter from "./components/NewsLetter/NewsLetter";
+import Home from "./components/Home/Home";
+import Package from "./components/Package/Package";
 
 function App() {
   const [headerClass, setHeaderClass] = useState();
@@ -53,7 +50,8 @@ function App() {
       {/*Header section */}
       <header className={headerClass}>
         <a href="" className="logo">
-          Company
+          <BiSolidPlaneTakeOff style={{ marginRight: "10px" }} />
+          FlyWithMe
         </a>
         <div id="menu-icon" className={menuIcon} onClick={menuClick}></div>
         <ul className={navBar}>
@@ -72,21 +70,8 @@ function App() {
         </ul>
       </header>
       {/*Home section */}
-      <section className="home" id="home">
-        <div className="home-text">
-          <h1>
-            Company
-            <br /> Travel & Tours
-          </h1>
-          <p id="para">
-            ' The world is book and those who do not travel <br /> read only one
-            page '
-          </p>
-          <a href="#" className="home-btn">
-            Let's go now
-          </a>
-        </div>
-      </section>
+      <Home />
+
       {/*container */}
       <section className="container">
         <div className="text">
@@ -122,214 +107,13 @@ function App() {
           </div>
         </div>
       </section>
+
       {/* Packages section */}
-      <section className="packages" id="packages">
-        <div className="title">
-          <h2>
-            Our upcoming
-            <br />
-            Tour packages
-          </h2>
-          <div className="package-content">
-            {/* box */}
-            <div className="box">
-              <div className="thum">
-                <img src={air1} alt=""></img>
-              </div>
-              <div className="dest-content">
-                <div className="location">
-                  <h4>Place</h4>
-                  <p>4h - 5h</p>
-                </div>
-                <div className="stars">
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* box */}
-            <div className="box">
-              <div className="thum">
-                <img src={air2} alt=""></img>
-              </div>
-              <div className="dest-content">
-                <div className="location">
-                  <h4>Place</h4>
-                  <p>4h - 5h</p>
-                </div>
-                <div className="stars">
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* box */}
-            <div className="box">
-              <div className="thum">
-                <img src={air2} alt=""></img>
-              </div>
-              <div className="dest-content">
-                <div className="location">
-                  <h4>Place</h4>
-                  <p>4h - 5h</p>
-                </div>
-                <div className="stars">
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* box */}
-            <div className="box">
-              <div className="thum">
-                <img src={air3} alt=""></img>
-              </div>
-              <div className="dest-content">
-                <div className="location">
-                  <h4>Place</h4>
-                  <p>4h - 5h</p>
-                </div>
-                <div className="stars">
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* box */}
-            <div className="box">
-              <div className="thum">
-                <img src={air1} alt=""></img>
-              </div>
-              <div className="dest-content">
-                <div className="location">
-                  <h4>Place</h4>
-                  <p>4h - 5h</p>
-                </div>
-                <div className="stars">
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                  <a>
-                    <i className="bx bxs-star"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* destination section */}
-      <section className="destination" id="destination">
-        <div className="title">
-          <h2>
-            Our most popular
-            <br />
-            Destination
-          </h2>
-        </div>
-        <div className="destination-content">
-          {/* content */}
-          <div className="col-content">
-            <img src={dest1} alt="Lush Landscapes – Barbados" />
-            <h5>Place</h5>
-            <p>Country</p>
-          </div>
-          {/* content */}
-          <div className="col-content">
-            <img src={dest2} alt="Netherlands, Amsterdam" />
-            <h5>Place</h5>
-            <p>Country</p>
-          </div>
-          {/* content */}
-          <div className="col-content">
-            <img src={dest3} alt="Santorini, Greece" />
-            <h5>Place</h5>
-            <p>Country</p>
-          </div>
-          {/* content */}
-          <div className="col-content">
-            <img src={dest4} alt="Bukovel Ukraine" />
-            <h5>Place</h5>
-            <p>Country</p>
-          </div>
-        </div>
-      </section>
-      {/* news letter section */}
-      <section className="newsletter">
-        <div className="news-text">
-          <h2>Newsletter</h2>
-          <p>
-            Subscribe to receive upcoming packages <br /> and Services
-          </p>
-        </div>
-        <div className="send">
-          <form>
-            <input type="email" placeholder="type your email" required />
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
-      </section>
+      <Package />
+
+      <Destination />
+      <Newsletter />
+
       {/* footer */}
       <section className="contact" id="contact">
         <div className="footer">
