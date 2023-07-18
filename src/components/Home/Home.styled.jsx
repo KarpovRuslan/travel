@@ -27,6 +27,7 @@ export const TextWrapper = styled.p`
   font-weight: 400;
   line-height: 36px;
   margin-bottom: 15px;
+  margin-left: 25px;
 `;
 
 export const TextSecond = styled.p`

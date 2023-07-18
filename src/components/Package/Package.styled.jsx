@@ -5,7 +5,7 @@ export const Content = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(250px, auto));
   grid-gap: 2rem;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 3rem;
 `;
 
 export const Wrapper = styled.div`
@@ -36,11 +36,12 @@ export const Img = styled.img`
 // }
 
 export const Info = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 24px;
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   align-items: center;
+  //   justify-content: space-between;
+  padding-top: 10px;
+  margin-bottom: 35px;
 `;
 
 export const Place = styled.h4`
