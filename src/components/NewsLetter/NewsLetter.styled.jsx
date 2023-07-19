@@ -23,6 +23,9 @@ export const Form = styled.form`
   max-width: 100%;
   width: 420px;
   position: relative;
+  @media (max-width: 575px) {
+    width: 350px;
+  }
 `;
 
 export const Input = styled.input`
