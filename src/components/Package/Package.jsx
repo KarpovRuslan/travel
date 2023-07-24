@@ -49,11 +49,21 @@ const Package = () => {
         <Content>
           <Swiper
             modules={[Navigation, Pagination, A11y, Autoplay]}
-            spaceBetween={20}
-            slidesPerView={3}
+            spaceBetween={30}
+            slidesPerView={2}
             pagination={true}
             autoplay={{ delay: 1500 }}
             className="mySwiper"
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+            }}
           >
             {packageData.map((item) => (
               <SwiperSlide key={nanoid()} className="box">

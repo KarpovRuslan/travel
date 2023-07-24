@@ -6,6 +6,9 @@ export const Content = styled.div`
   grid-gap: 2rem;
   align-items: center;
   margin-top: 3rem;
+  // @media (max-width: 575px) {
+  //   width: 100%;
+  // }
 `;
 
 export const Wrapper = styled.div`
@@ -36,10 +39,6 @@ export const Img = styled.img`
 // }
 
 export const Info = styled.div`
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   align-items: center;
-  //   justify-content: space-between;
   padding-top: 10px;
   margin-bottom: 35px;
 `;
