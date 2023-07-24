@@ -5,8 +5,8 @@ export const Wrapper = styled.section`
 `;
 
 export const DestinationContent = styled.div`
-  display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(340px, auto));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
   grid-gap: 2rem;
   align-items: center;
   margin-top: 5rem;
@@ -24,7 +24,7 @@ export const ItemContent = styled.div`
 
 export const Image = styled.img`
   width: 100%;
-  height: 500px;
+  height: 450px;
   object-fit: cover;
   border-radius: 15px;
   filter: brightness(80%);
@@ -51,4 +51,10 @@ export const Country = styled.p`
   left: 15px;
   bottom: 30px;
   letter-spacing: 2px;
+`;
+
+export const Title = styled.div`
+  text-align: center;
+  font-size: var(--h2-font);
+  line-height: 1.2;
 `;

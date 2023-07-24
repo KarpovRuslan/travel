@@ -15,7 +15,15 @@ import air5 from "../../assets/img/pack5.webp";
 import air6 from "../../assets/img/pack6.webp";
 import air7 from "../../assets/img/pack7.webp";
 import air8 from "../../assets/img/pack8.jpeg";
-import { Content, Duration, Img, Info, Place, Wrapper } from "./Package.styled";
+import {
+  Content,
+  Duration,
+  Img,
+  Info,
+  Place,
+  Title,
+  Wrapper,
+} from "./Package.styled";
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 const Package = () => {
@@ -36,8 +44,8 @@ const Package = () => {
 
   return (
     <section className="packages" id="packages">
-      <div className="title">
-        <h2>Our tour packages</h2>
+      <Title>
+        Our tour packages
         <Content>
           <Swiper
             modules={[Navigation, Pagination, A11y, Autoplay]}
@@ -62,7 +70,7 @@ const Package = () => {
             ))}
           </Swiper>
         </Content>
-      </div>
+      </Title>
     </section>
   );
 };

@@ -11,6 +11,7 @@ import {
   Text,
   Country,
   Wrapper,
+  Title,
 } from "./Destination.styled";
 
 const Destination = () => {
@@ -42,13 +43,11 @@ const Destination = () => {
   ];
   return (
     <Wrapper id="destination">
-      <div className="title">
-        <h2>
-          Our most popular
-          <br />
-          Destination
-        </h2>
-      </div>
+      <Title>
+        Our most popular
+        <br />
+        Destination
+      </Title>
       <DestinationContent>
         {destinations.map((dest) => (
           <ItemContent key={nanoid()}>

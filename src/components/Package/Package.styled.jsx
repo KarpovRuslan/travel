@@ -54,3 +54,9 @@ export const Duration = styled.p`
   font-size: 15px;
   color: var(--second-color);
 `;
+
+export const Title = styled.div`
+  text-align: center;
+  font-size: var(--h2-font);
+  line-height: 1.2;
+`;
