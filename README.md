@@ -1,15 +1,13 @@
-# Travel WebSite made using this technologies
+# Travel WebSite made using this technologies and scripts
 
-<img alt="React" width="32px" src="/../src/assets/img/tech/react.png"/>
+- React
 
-<img alt="CSS" width="32px" src="/../src/assets/img/tech/css.jpeg" />
+- CSS
 
-<img alt="HTML" width="32px" src={/../src/assets/img/tech/html.png} />
+- HTML
 
-<img alt="JS" width="32px" src={/../src/assets/img/tech/js.png} />
+- JavaScript
 
-<img alt="Gh_Pages" width="32px" src={/../src/assets/img/tech/ghpages.png} />
+- Styled Components
 
-<img alt="StyledComponents" width="32px" src={/../src/assets/img/tech/styledComponents.png} />
-
-<img alt="Swiper" width="32px" src={/../src/assets/img/tech/swiper.svg} />
+- Swiper
